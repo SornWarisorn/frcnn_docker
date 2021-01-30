@@ -1,0 +1,38 @@
+<annotation>
+	<folder>data</folder>
+	<filename>MVI_2976 231.jpg</filename>
+	<path>D:\data\MVI_2976 231.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>360</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>out</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>424</xmin>
+			<ymin>190</ymin>
+			<xmax>507</xmax>
+			<ymax>230</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>out</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>428</xmin>
+			<ymin>194</ymin>
+			<xmax>502</xmax>
+			<ymax>225</ymax>
+		</bndbox>
+	</object>
+</annotation>

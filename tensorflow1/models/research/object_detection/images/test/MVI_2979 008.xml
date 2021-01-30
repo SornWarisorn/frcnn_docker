@@ -1,0 +1,38 @@
+<annotation>
+	<folder>data</folder>
+	<filename>MVI_2979 008.jpg</filename>
+	<path>D:\data\MVI_2979 008.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>360</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>out</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>329</xmin>
+			<ymin>198</ymin>
+			<xmax>411</xmax>
+			<ymax>237</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>in</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>333</xmin>
+			<ymin>201</ymin>
+			<xmax>407</xmax>
+			<ymax>232</ymax>
+		</bndbox>
+	</object>
+</annotation>
