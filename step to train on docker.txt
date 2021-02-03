@@ -1,0 +1,50 @@
+alias python=python3
+
+apt update
+apt install git
+apt install python3-pip
+
+git clone https://github.com/SornWarisorn/frcnn_docker.git
+
+pip3 install tensorflow==1.11.0
+pip3 install pillow
+pip3 install lxml
+pip3 install Cython
+pip3 install contextlib2
+pip3 install jupyter
+pip3 install matplotlib
+pip3 install pandas
+pip3 install opencv-python
+pip3 install protobuf==3.10.0
+
+/frcnn_docker/tensorflow1/models/research/protobuf/bin#
+chmod +x protoc
+
+/frcnn_docker/tensorflow1/models/research
+./protobuf/bin/protoc object_detection/protos/*.proto --python_out=.
+
+export PYTHONPATH=$PYTHONPATH:/frcnn_docker/tensorflow1/models/research:/frcnn_docker/tensorflow1/models/research/slim
+
+python3 setup.py build
+python3 setup.py install
+
+python3 object_detection/builders/model_builder_test.py
+(OK)
+
+/frcnn_docker/tensorflow1/models/research/object_detection#
+python3 xml_to_csv.py
+
+python3 generate_tfrecord.py --csv_input=images/train_labels.csv --image_dir=images/train --output_path=images/train.record
+
+python3 generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=images/test.record
+
+python3 train.py --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config --checkpoint_dir=training/
+
+
+nano /frcnn_docker/tensorflow1/models/research/object_detection/training/faster_rcnn_inception_v2_pets.config
+nano /frcnn_docker/tensorflow1/models/research/object_detection/training/pipeline.config
+
+C:\Windows\System32\DriverStore\FileRepository\nvhm.inf_amd64_ce46a61dd6580c07
+nvidia-smi.exe -l
+
+
